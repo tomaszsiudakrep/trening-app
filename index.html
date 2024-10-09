@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minutnik</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#333333">
 </head>
 <body>
-
-
 
 <div id="timerContainer">
     <h1>Trening app</h1>
@@ -34,11 +34,20 @@
     <button id="resetButton" disabled>Reset</button>
 </div>
 
-
 <audio id="beepSound" src="beep.mp3"></audio>
 <audio id="congratsSound" src="congratulations.mp3"></audio>
 
-
 <script src="script.js"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+                console.log('Service Worker zarejestrowany:', registration);
+            })
+            .catch(function(error) {
+                console.log('Rejestracja Service Worker nieudana:', error);
+            });
+    }
+</script>
 </body>
 </html>

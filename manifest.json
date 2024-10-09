@@ -1,0 +1,21 @@
+{
+  "name": "Minutnik Treningowy",
+  "short_name": "Minutnik",
+  "description": "Aplikacja minutnik dla treningu z rundami i przerwami.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
