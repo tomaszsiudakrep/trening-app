@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minutnik</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+
+<div id="timerContainer">
+    <h1>Trening app</h1>
+
+    <div>
+        <label for="rounds">Ilość Rund:</label>
+        <input type="number" id="rounds" min="1" value="10">
+    </div>
+
+    <div>
+        <label for="roundTime">Długość Rundy (sekundy):</label>
+        <input type="number" id="roundTime" min="1" value="20">
+    </div>
+
+    <div>
+        <label for="breakTime">Długość Przerwy (sekundy):</label>
+        <input type="number" id="breakTime" min="1" value="10">
+    </div>
+    <div id="roundLabel"></div>
+    <div id="timerDisplay">00:00</div>
+    <button id="startButton">Start</button>
+    <button id="stopButton" disabled>Stop</button>
+    <button id="resetButton" disabled>Reset</button>
+</div>
+
+
+<audio id="beepSound" src="beep.mp3"></audio>
+<audio id="congratsSound" src="congratulations.mp3"></audio>
+
+
+<script src="script.js"></script>
+</body>
+</html>

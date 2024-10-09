@@ -1,0 +1,64 @@
+/* Ustawienie tła */
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+/* Kontener na minutnik */
+#timerContainer {
+    background-color: white; /* Białe tło */
+    padding: 20px; /* Odstęp wewnętrzny, aby tekst nie dotykał brzegów */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Delikatny cień wokół */
+    border: 2px solid #333; /* Ramka minutnika */
+    text-align: center; /* Wyśrodkowanie elementów wewnątrz */
+}
+
+/* Styl etykiety dla rundy */
+#roundLabel {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333; /* Ciemniejszy kolor tekstu dla lepszej widoczności na białym tle */
+}
+
+/* Styl wyświetlacza minutnika */
+#timerDisplay {
+    font-size: 48px;
+    color: #333; /* Ciemny kolor minutnika */
+    margin-bottom: 20px;
+}
+
+/* Styl przycisków */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startButton {
+    background-color: #28a745;
+    color: white;
+}
+
+#stopButton {
+    background-color: #dc3545;
+    color: white;
+}
+
+#resetButton {
+    background-color: #ffc107;
+    color: white;
+}
