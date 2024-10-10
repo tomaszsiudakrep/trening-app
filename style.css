@@ -64,7 +64,7 @@ button {
 }
 
 input {
-    width: 20%; /* Szerokość inputa */
+    width: 25px; /* Szerokość inputa */
     padding: 10px; /* Wewnętrzny odstęp */
     margin: 5px 0; /* Zewnętrzny odstęp */
     border-radius: 8px; /* Zaokrąglenie rogów */
