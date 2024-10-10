@@ -1,8 +1,8 @@
 const CACHE_NAME = 'timer-cache-v1';
 const urlsToCache = [
-    '/trening-app/',
+    '/trening-app',
     '/trening-app/index.html',
-    '/trening-apptrening-app/style.css',
+    '/trening-app/style.css',
     '/trening-app/script.js',
     '/trening-app/manifest.json',
     '/trening-app/icons/icon-192x192.png',
