@@ -1,7 +1,8 @@
 {
   "name": "KalistenikaApp",
   "short_name": "KalistenikaApp",
-  "start_url": "https://tomaszsiudakrep.github.io/trening-app/index.html",
+  "start_url": "/index.html",
+  "id": "https://tomaszsiudakrep.github.io/trening-app",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
