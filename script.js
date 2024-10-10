@@ -25,7 +25,7 @@ let isPaused = false; // Dodana zmienna do śledzenia pauzy
 
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js')
+        navigator.serviceWorker.register('/trening-app/service-worker.js')
             .then(function(registration) {
                 console.log('Service Worker zarejestrowany z zakresem:', registration.scope);
             }, function(err) {
