@@ -160,7 +160,6 @@ function timerTick() {
                 roundLabel.textContent = `Wszystkie obwody zakończone!`;
                 statusLabel.textContent = ''; // Po zakończeniu obwodów, wyczyść status
                 congratsSound.play();
-                alert("Wszystkie obwody zakończone!");
                 return;
             }
         } else if (currentPhase === 'break') {
