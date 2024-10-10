@@ -34,6 +34,40 @@ if ('serviceWorker' in navigator) {
     });
 }
 
+let wakeLock = null;
+
+async function requestWakeLock() {
+    try {
+        wakeLock = await navigator.wakeLock.request('screen');
+        console.log('Wake Lock: Screen is active');
+    } catch (err) {
+        console.error(`Failed to acquire wake lock: ${err.name}, ${err.message}`);
+    }
+}
+
+function releaseWakeLock() {
+    if (wakeLock !== null) {
+        wakeLock.release().then(() => {
+            wakeLock = null;
+            console.log('Wake Lock released');
+        });
+    }
+}
+
+// Wywołaj requestWakeLock, gdy zaczynasz minutnik
+document.getElementById('startButton').addEventListener('click', () => {
+    requestWakeLock();
+});
+
+// Wywołaj releaseWakeLock, gdy zatrzymujesz minutnik lub resetujesz
+document.getElementById('stopButton').addEventListener('click', () => {
+    releaseWakeLock();
+});
+
+document.getElementById('resetButton').addEventListener('click', () => {
+    releaseWakeLock();
+});
+
 
 // Funkcja do formatowania czasu w stylu MM:SS
 function formatTime(seconds) {
