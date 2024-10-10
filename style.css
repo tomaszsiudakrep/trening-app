@@ -63,3 +63,13 @@ button {
     background-color: #ffc107;
     color: white;
 }
+
+input {
+    width: 20%; /* Szerokość inputa */
+    padding: 10px; /* Wewnętrzny odstęp */
+    margin: 5px 0; /* Zewnętrzny odstęp */
+    border-radius: 8px; /* Zaokrąglenie rogów */
+    border: 1px solid #ccc; /* Kolor i styl obramowania */
+}
+
+
