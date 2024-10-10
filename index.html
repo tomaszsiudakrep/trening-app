@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KalistenikaApp</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/trening-app/style.css">
     <link rel="manifest" href="/trening-app/manifest.json">
     <link rel="icon" href="/trening-app/icons/icon-192x192.png" type="image/png">
 
@@ -20,29 +20,29 @@
     </div>
 
     <div>
-        <label for="rounds">Ilość Rund w Obwodzie:</label>
-        <input type="number" id="rounds" min="1" value="7">
+        <label for="rounds">Ilość rund w obwodzie:</label>
+        <input type="number" id="rounds" min="1" value="3">
     </div>
 
     <div>
-        <label for="roundTime">Długość Rundy (sekundy):</label>
-        <input type="number" id="roundTime" min="1" value="20">
+        <label for="roundTime">Długość rundy:</label>
+        <input type="number" id="roundTime" min="1" value="30">
     </div>
 
     <div>
-        <label for="breakTime">Długość Przerwy między Rundami (sekundy):</label>
-        <input type="number" id="breakTime" min="1" value="10">
+        <label for="breakTime">Długość przerwy między rundami:</label>
+        <input type="number" id="breakTime" min="1" value="30">
     </div>
 
     <div>
-        <label for="circuitBreakTime">Długość Przerwy między Obwodami (sekundy):</label>
-        <input type="number" id="circuitBreakTime" min="1" value="30">
+        <label for="circuitBreakTime">Długość przerwy między obwodami:</label>
+        <input type="number" id="circuitBreakTime" min="1" value="150">
     </div>
 
 
 
     <div id="roundLabel"></div>
-    <div id="timerDisplay">00:00</div>
+    <div id="timerDisplay"></div>
     <button id="startButton">Start</button>
     <button id="stopButton" disabled>Stop</button>
     <button id="resetButton" disabled>Reset</button>
