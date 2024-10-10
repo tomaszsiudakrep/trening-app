@@ -1,7 +1,7 @@
 {
   "name": "KalistenikaApp",
   "short_name": "KalistenikaApp",
-  "start_url": "/index.html",
+  "start_url": "/trening-app/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
