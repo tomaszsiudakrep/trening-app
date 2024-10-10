@@ -1,6 +1,7 @@
 /* Ustawienie tła */
 body {
-    background-image: url('background.jpg');
+/*     background-image: url('background.jpg'); */
+    background-color: #000000;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
