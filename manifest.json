@@ -1,6 +1,6 @@
 {
-  "name": "Minutnik Treningowy",
-  "short_name": "Minutnik",
+  "name": "KalistenikaApp",
+  "short_name": "KalistenikaApp",
   "start_url": "/index.html",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -8,12 +8,12 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "/trening-app/icons/icon-192x192.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icons/icon-512x512.png",
+      "src": "/trening-app/icons/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
