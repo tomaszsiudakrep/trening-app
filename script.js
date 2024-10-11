@@ -194,9 +194,10 @@ function timerTick() {
             } else {
                 stopTimer();
                 timerDisplay.textContent = "00:00";
-                roundLabel.textContent = `Wszystkie obwody zakończone!`;
+                roundLabel.textContent = `Koniec treningu! Gratulacje!`;
                 statusLabel.textContent = ''; // Po zakończeniu obwodów, wyczyść status
                 congratsSound.play();
+                stopButton.disabled = True;
                 return;
             }
         } else if (currentPhase === 'break') {
