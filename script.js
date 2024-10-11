@@ -86,11 +86,11 @@ function updateDisplay() {
 // Funkcja do aktualizacji etykiety statusu
 function updateStatusLabel() {
     if (currentPhase === 'round') {
-        statusLabel.textContent = "Trwa trening!";
+        statusLabel.textContent = "Ogień!";
     } else if (currentPhase === 'break') {
-        statusLabel.textContent = "Przerwa między rundami";
+        statusLabel.textContent = "Przerwa";
     } else if (currentPhase === 'circuitBreak') {
-        statusLabel.textContent = "Przerwa między obwodami";
+        statusLabel.textContent = "Przerwa";
     }
 }
 
@@ -117,7 +117,6 @@ function startTimer() {
     let countdown = 3;
     updateDisplay();
     timerDisplay.textContent = `00:0${countdown}`;
-
     beepSound.play();
 
     const countdownInterval = setInterval(() => {
@@ -160,7 +159,7 @@ function resetTimer() {
     currentRound = 0;
     currentPhase = 'round';
 
-    timerDisplay.textContent = "00:00";
+    timerDisplay.textContent = '';
     roundLabel.textContent = ''; // Wyczyść etykietę z informacją o obwodzie i rundzie
     statusLabel.textContent = ''; // Wyczyść etykietę statusu
 
@@ -212,6 +211,23 @@ function timerTick() {
 }
 
 // Obsługa kliknięć przycisków
-startButton.addEventListener("click", startTimer);
+startButton.addEventListener("click", () => {
+        const settings = document.getElementById('settings');
+        settings.classList.add('hidden');
+        startTimer();
+});
 stopButton.addEventListener("click", stopTimer);
-resetButton.addEventListener("click", resetTimer);
+resetButton.addEventListener("click", () => {
+    const settings = document.getElementById('settings');
+    settings.classList.remove('hidden');
+    resetTimer();
+});
+
+// // Funkcja, która ukrywa div po naciśnięciu przycisku Start
+// document.getElementById('startButton').addEventListener('click', () => {
+//     // Pobieranie elementu div o id 'timerContainer'
+//     const timerContainer = document.getElementById('timerContainer');
+//
+//     // Dodanie klasy 'hidden', która ustawia display na 'none'
+//     timerContainer.classList.add('hidden');
+// });

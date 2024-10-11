@@ -5,8 +5,8 @@ const urlsToCache = [
     '/trening-app/style.css',
     '/trening-app/script.js',
     '/trening-app/manifest.json',
-    '/trening-app/icons/icon-192x192.png',
-    '/trening-app/icons/icon-512x512.png'
+    '/trening-app/icons/icon-192x192.jpeg',
+    '/trening-app/icons/icon-512x512.jpeg'
 ];
 
 // Instalowanie Service Workera i dodanie zasobów do cache

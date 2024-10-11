@@ -71,4 +71,13 @@ input {
     border: 1px solid #ccc; /* Kolor i styl obramowania */
 }
 
+.hidden {
+    display: none;
+}
 
+#statusLabel {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: black;
+    border-radius: 8px;
+}
