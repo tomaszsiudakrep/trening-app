@@ -110,8 +110,8 @@ function startTimer() {
     timeRemaining = roundTime;
 
     startButton.disabled = true;
-    stopButton.disabled = false;
-    resetButton.disabled = false;
+    stopButton.disabled = true;  // Wyłącz przycisk STOP na początku
+    resetButton.disabled = true; // Wyłącz przycisk RESET na początku
 
     // Opóźniony start o 3 sekundy
     let countdown = 3;
@@ -128,6 +128,10 @@ function startTimer() {
             updateDisplay();
             timerInterval = setInterval(timerTick, 1000);
             beepSound.play();
+
+            // Włącz przycisk STOP i RESET po zakończeniu odliczania opóźnienia
+            stopButton.disabled = false;
+            resetButton.disabled = false;
         }
     }, 1000);
 }
