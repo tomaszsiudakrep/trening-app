@@ -1,6 +1,6 @@
 {
-  "name": "KalistenikaApp",
-  "short_name": "KalistenikaApp",
+  "name": "TrainingApp",
+  "short_name": "TrainingApp",
   "start_url": "/trening-app/index.html",
   "id": "/trening-app/index.html",
   "display": "standalone",
