@@ -90,7 +90,7 @@ function updateStatusLabel() {
     } else if (currentPhase === 'break') {
         statusLabel.textContent = "Przerwa";
     } else if (currentPhase === 'circuitBreak') {
-        statusLabel.textContent = "Przerwa";
+        statusLabel.textContent = "Przerwa między obwodami";
     }
 }
 
