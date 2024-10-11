@@ -34,8 +34,10 @@ body {
 /* Styl wyświetlacza minutnika */
 #timerDisplay {
     font-size: 48px;
-    color: #333; /* Ciemny kolor minutnika */
+    background-color: black;
+    color: white; /* Ciemny kolor minutnika */
     margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 /* Styl przycisków */
