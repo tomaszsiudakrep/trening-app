@@ -197,7 +197,8 @@ function timerTick() {
                 roundLabel.textContent = `Koniec treningu! Gratulacje!`;
                 statusLabel.textContent = ''; // Po zakończeniu obwodów, wyczyść status
                 congratsSound.play();
-                stopButton.disabled = true;
+                stopButton.classList.add('hidden');
+                startButton.classList.add('hidden');
                 return;
             }
         } else if (currentPhase === 'break') {
