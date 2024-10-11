@@ -1,6 +1,6 @@
 {
-  "name": "TrainingApp",
-  "short_name": "TrainingApp",
+  "name": "Training Timer",
+  "short_name": "Training Timer",
   "start_url": "/trening-app/index.html",
   "id": "/trening-app/index.html",
   "display": "standalone",
