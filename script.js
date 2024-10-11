@@ -226,10 +226,10 @@ stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", () => {
     const settings = document.getElementById('settings');
     settings.classList.remove('hidden');
-    const startButton = document.getElementById('startButton');
-    startButton.classList.remove('hidden');
-    const stopButton = document.getElementById('stopButton');
-    stopButton.classList.remove('hidden');
+    const start_button = document.getElementById('startButton');
+    start_button.classList.remove('hidden');
+    const stop_button = document.getElementById('stopButton');
+    stop_button.classList.remove('hidden');
     resetTimer();
 });
 
