@@ -224,13 +224,19 @@ startButton.addEventListener("click", () => {
 });
 stopButton.addEventListener("click", stopTimer);
 resetButton.addEventListener("click", () => {
-    const settings = document.getElementById('settings');
-    settings.classList.remove('hidden');
-    const start_button = document.getElementById('startButton');
-    start_button.classList.remove('hidden');
-    const stop_button = document.getElementById('stopButton');
-    stop_button.classList.remove('hidden');
-    resetTimer();
+    // Pokaż okno dialogowe potwierdzenia
+    const confirmReset = confirm("Czy na pewno chcesz zresetować trening?");
+
+    // Jeśli użytkownik potwierdzi reset
+    if (confirmReset) {
+        const settings = document.getElementById('settings');
+        settings.classList.remove('hidden');
+        const start_button = document.getElementById('startButton');
+        start_button.classList.remove('hidden');
+        const stop_button = document.getElementById('stopButton');
+        stop_button.classList.remove('hidden');
+        resetTimer();
+    }
 });
 
 // // Funkcja, która ukrywa div po naciśnięciu przycisku Start
