@@ -239,6 +239,45 @@ resetButton.addEventListener("click", () => {
     }
 });
 
+
+function calculateTotalTrainingTime() {
+    // Pobieramy wartości z inputów
+    const circuits = parseInt(circuitsInput.value);
+    const rounds = parseInt(roundsInput.value);
+    const roundTime = parseInt(roundTimeInput.value);
+    const breakTime = parseInt(breakTimeInput.value);
+    const circuitBreakTime = parseInt(circuitBreakTimeInput.value);
+
+    // Obliczamy całkowity czas rund
+    const totalRoundTime = circuits * rounds * roundTime;
+
+    // Obliczamy całkowity czas przerw między rundami
+    const totalBreakTime = circuits * (rounds - 1) * breakTime; // Ilość przerw to ilość rund - 1
+
+    // Obliczamy całkowity czas przerw między obwodami (jeśli obwodów jest więcej niż 1)
+    const totalCircuitBreakTime = (circuits > 1) ? (circuits - 1) * circuitBreakTime : 0;
+
+    // Sumujemy wszystkie czasy
+    const totalTime = totalRoundTime + totalBreakTime + totalCircuitBreakTime;
+
+    // Konwertujemy całkowity czas na format MM:SS
+    const formattedTotalTime = formatTime(totalTime);
+
+    // Wyświetlamy całkowity czas treningu
+    const totalTimeLabel = document.getElementById("totalTimeLabel");
+    totalTimeLabel.textContent = `Łączny czas treningu: ${formattedTotalTime}`;
+}
+
+// Wywołanie funkcji przy zmianie ustawień
+circuitsInput.addEventListener("input", calculateTotalTrainingTime);
+roundsInput.addEventListener("input", calculateTotalTrainingTime);
+roundTimeInput.addEventListener("input", calculateTotalTrainingTime);
+breakTimeInput.addEventListener("input", calculateTotalTrainingTime);
+circuitBreakTimeInput.addEventListener("input", calculateTotalTrainingTime);
+
+// Wywołaj funkcję raz na początku, aby wyświetlić początkowy czas
+calculateTotalTrainingTime();
+
 // // Funkcja, która ukrywa div po naciśnięciu przycisku Start
 // document.getElementById('startButton').addEventListener('click', () => {
 //     // Pobieranie elementu div o id 'timerContainer'
