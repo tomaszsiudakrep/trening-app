@@ -10,6 +10,7 @@ const statusLabel = document.getElementById("statusLabel"); // Nowy element stat
 const startButton = document.getElementById("startButton");
 const stopButton = document.getElementById("stopButton");
 const resetButton = document.getElementById("resetButton");
+const dropBreakButton = document.getElementById("dropBreakButton");
 const beepSound = document.getElementById("beepSound");
 const congratsSound = document.getElementById("congratsSound");
 
@@ -110,8 +111,9 @@ function startTimer() {
     timeRemaining = roundTime;
 
     startButton.disabled = true;
-    stopButton.disabled = true;  // Wyłącz przycisk STOP na początku
-    resetButton.disabled = true; // Wyłącz przycisk RESET na początku
+    stopButton.disabled = true;
+    resetButton.disabled = true;
+    // dropBreakButton.disabled = true;
 
     // Opóźniony start o 3 sekundy
     let countdown = 3;
@@ -132,6 +134,7 @@ function startTimer() {
             // Włącz przycisk STOP i RESET po zakończeniu odliczania opóźnienia
             stopButton.disabled = false;
             resetButton.disabled = false;
+            // dropBreakButton.disabled = false;
         }
     }, 1000);
 }
@@ -175,6 +178,8 @@ function resetTimer() {
 
 // Funkcja wykonująca odliczanie czasu
 function timerTick() {
+    dropBreakButton.disabled = !(currentPhase === 'break' || currentPhase === 'circuitBreak');
+    // dropBreakButton.disabled = true;
     timeRemaining--;
 
     // Sprawdzanie dźwięku na 3 sekundy przed końcem
@@ -199,6 +204,7 @@ function timerTick() {
                 congratsSound.play();
                 stopButton.classList.add('hidden');
                 startButton.classList.add('hidden');
+                dropBreakButton.classList.add('hidden');
                 return;
             }
         } else if (currentPhase === 'break') {
@@ -214,6 +220,7 @@ function timerTick() {
     }
 
     updateDisplay();
+    // updateShortenBreakButton();
 }
 
 // Obsługa kliknięć przycisków
@@ -286,3 +293,22 @@ calculateTotalTrainingTime();
 //     // Dodanie klasy 'hidden', która ustawia display na 'none'
 //     timerContainer.classList.add('hidden');
 // });
+
+// const shortenBreakButton = document.getElementById("dropBreakButton");
+
+// Skrócenie przerwy do 3 sekund
+function shortenBreak() {
+    if (currentPhase === 'break' || currentPhase === 'circuitBreak') {
+        timeRemaining = 3; // Ustaw czas pozostały na przerwę na 3 sekundy
+        updateDisplay(); // Aktualizuj wyświetlanie odliczania
+        beepSound.play(); // Opcjonalne: Sygnał dźwiękowy informujący o skróceniu przerwy
+    }
+}
+
+// Obsługa kliknięcia przycisku skrócenia przerwy
+dropBreakButton.addEventListener("click", shortenBreak);
+
+// Funkcja do aktualizacji stanu przycisku
+// function updateShortenBreakButton() {
+//     dropBreakButton.disabled = !(currentPhase === 'break' || currentPhase === 'circuitBreak');
+// }
